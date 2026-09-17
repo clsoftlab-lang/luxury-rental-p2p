@@ -1,0 +1,32 @@
+{
+  "categories": [
+    { "key": "bag", "ko": "가방", "icon": "bag" },
+    { "key": "watch", "ko": "시계", "icon": "watch" },
+    { "key": "jewelry", "ko": "주얼리", "icon": "gem" },
+    { "key": "clothing", "ko": "의류", "icon": "coat" }
+  ],
+  "pricing": {
+    "serviceFeeRate": 0.1,
+    "insuranceDailyRate": 0.008,
+    "weeklyDiscount": 0.1,
+    "monthlyDiscount": 0.2,
+    "weeklyThresholdDays": 7,
+    "monthlyThresholdDays": 28,
+    "currency": "KRW"
+  },
+  "protectionSteps": [
+    { "step": 1, "title": "정품 인증 접수", "desc": "소유자가 아이템을 등록하면 전문 인증사(데모: 모의)가 로고·각인·소재·시리얼을 검수합니다." },
+    { "step": 2, "title": "인증 배지 발급", "desc": "검수 통과 시 인증 코드와 배지를 발급합니다. 대여자는 배지로 신뢰도를 확인합니다." },
+    { "step": 3, "title": "보증금 에스크로", "desc": "대여자의 보증금을 결제 시 안전하게 예치(데모: 모의)하고, 정상 반납 시 환급합니다." },
+    { "step": 4, "title": "선택형 손상/분실 보험", "desc": "일일 보험료로 파손·분실 위험을 커버(데모: 모의)합니다. 자기부담금이 적용됩니다." },
+    { "step": 5, "title": "반납 검수 & 체크리스트", "desc": "반납 시 사진·상태 체크리스트를 상호 확인해 분쟁을 예방하고 보증금을 정산합니다." },
+    { "step": 6, "title": "양방향 리뷰", "desc": "대여자·소유자가 서로를 평가해 커뮤니티 신뢰를 축적합니다." }
+  ],
+  "returnChecklist": [
+    "외관 스크래치/오염 확인 및 사진 촬영",
+    "부속품(더스트백·보증서·박스) 동봉 여부 확인",
+    "정품 인증 코드 재확인",
+    "지퍼·잠금장치·무브먼트 등 기능 작동 확인",
+    "보증금 환급 요청 및 정산 확인"
+  ]
+}

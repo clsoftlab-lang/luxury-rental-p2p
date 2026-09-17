@@ -1,0 +1,2241 @@
+{
+  "meta": {
+    "generated": "2026-09-17",
+    "disclaimer": "모든 브랜드는 가상의 명칭이며 실존 상표와 무관합니다. 정품 인증/에스크로/보험은 데모용 모의 흐름입니다.",
+    "count": 40
+  },
+  "items": [
+    {
+      "id": "LR-001",
+      "name": "Orsini & Vela 토트백",
+      "brand": "Orsini & Vela",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "미니",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 86000,
+      "deposit": 1230000,
+      "retailValue": 3680000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-17",
+        "code": "AUTH-10007"
+      },
+      "insuranceEligible": true,
+      "color": "#a67c52",
+      "owner": {
+        "name": "유나 H.",
+        "rating": 4.9,
+        "reviews": 47
+      },
+      "rating": 4.9,
+      "reviewsCount": 41,
+      "location": "대구 수성",
+      "description": "Orsini & Vela의 토트백입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Orsini & Vela",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10"
+      ],
+      "seededReviews": [
+        {
+          "by": "태민 S.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-002",
+      "name": "Orsini & Vela 토트백",
+      "brand": "Orsini & Vela",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "미디엄",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 58000,
+      "deposit": 1300000,
+      "retailValue": 3550000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-20",
+        "code": "AUTH-10014"
+      },
+      "insuranceEligible": true,
+      "color": "#c2a878",
+      "owner": {
+        "name": "유나 H.",
+        "rating": 4.9,
+        "reviews": 47
+      },
+      "rating": 4.2,
+      "reviewsCount": 8,
+      "location": "서울 성수",
+      "description": "Orsini & Vela의 토트백입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Orsini & Vela",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      "seededReviews": [
+        {
+          "by": "지현 K.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-003",
+      "name": "Aureléon 크로스백",
+      "brand": "Aureléon",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "미디엄",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 30000,
+      "deposit": 420000,
+      "retailValue": 1180000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-17",
+        "code": "AUTH-10021"
+      },
+      "insuranceEligible": true,
+      "color": "#c2a878",
+      "owner": {
+        "name": "태민 S.",
+        "rating": 4.5,
+        "reviews": 9
+      },
+      "rating": 4.3,
+      "reviewsCount": 33,
+      "location": "서울 한남",
+      "description": "Aureléon의 크로스백입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Aureléon",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "지현 K.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-004",
+      "name": "Maison Corvel 크로스백",
+      "brand": "Maison Corvel",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "미니",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 104000,
+      "deposit": 1100000,
+      "retailValue": 3690000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-13",
+        "code": "AUTH-10028"
+      },
+      "insuranceEligible": true,
+      "color": "#c2a878",
+      "owner": {
+        "name": "유나 H.",
+        "rating": 4.9,
+        "reviews": 47
+      },
+      "rating": 4.4,
+      "reviewsCount": 33,
+      "location": "부산 해운대",
+      "description": "Maison Corvel의 크로스백입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Maison Corvel",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30"
+      ],
+      "seededReviews": [
+        {
+          "by": "태민 S.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-005",
+      "name": "Aureléon 호보백",
+      "brand": "Aureléon",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "미니",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 93000,
+      "deposit": 830000,
+      "retailValue": 3270000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-18",
+        "code": "AUTH-10035"
+      },
+      "insuranceEligible": true,
+      "color": "#7c5c3e",
+      "owner": {
+        "name": "서준 P.",
+        "rating": 4.7,
+        "reviews": 23
+      },
+      "rating": 4.6,
+      "reviewsCount": 10,
+      "location": "서울 강남",
+      "description": "Aureléon의 호보백입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Aureléon",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "태민 S.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "서준 P.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-006",
+      "name": "Maison Corvel 크로스백",
+      "brand": "Maison Corvel",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "스몰",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 89000,
+      "deposit": 890000,
+      "retailValue": 3330000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-06",
+        "code": "AUTH-10042"
+      },
+      "insuranceEligible": true,
+      "color": "#a67c52",
+      "owner": {
+        "name": "하은 J.",
+        "rating": 4.8,
+        "reviews": 34
+      },
+      "rating": 4.9,
+      "reviewsCount": 48,
+      "location": "대구 수성",
+      "description": "Maison Corvel의 크로스백입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Maison Corvel",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "태민 S.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-007",
+      "name": "Solenne Rivé 버킷백",
+      "brand": "Solenne Rivé",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "미디엄",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 25000,
+      "deposit": 360000,
+      "retailValue": 1270000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-10",
+        "code": "AUTH-10049"
+      },
+      "insuranceEligible": false,
+      "color": "#7c5c3e",
+      "owner": {
+        "name": "도윤 C.",
+        "rating": 4.6,
+        "reviews": 12
+      },
+      "rating": 4.6,
+      "reviewsCount": 34,
+      "location": "서울 여의도",
+      "description": "Solenne Rivé의 버킷백입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Solenne Rivé",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "하은 J.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-008",
+      "name": "Solenne Rivé 숄더백",
+      "brand": "Solenne Rivé",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "미니",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 14000,
+      "deposit": 170000,
+      "retailValue": 470000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-09",
+        "code": "AUTH-10056"
+      },
+      "insuranceEligible": false,
+      "color": "#c2a878",
+      "owner": {
+        "name": "민아 L.",
+        "rating": 5,
+        "reviews": 58
+      },
+      "rating": 4.4,
+      "reviewsCount": 32,
+      "location": "서울 강남",
+      "description": "Solenne Rivé의 숄더백입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Solenne Rivé",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19"
+      ],
+      "seededReviews": [
+        {
+          "by": "하은 J.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-009",
+      "name": "Solenne Rivé 크로스백",
+      "brand": "Solenne Rivé",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "미디엄",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 67000,
+      "deposit": 890000,
+      "retailValue": 2010000,
+      "authenticity": {
+        "status": "pending",
+        "authenticator": null,
+        "checkedDate": null,
+        "code": null
+      },
+      "insuranceEligible": true,
+      "color": "#a67c52",
+      "owner": {
+        "name": "민아 L.",
+        "rating": 5,
+        "reviews": 58
+      },
+      "rating": 4.4,
+      "reviewsCount": 56,
+      "location": "부산 해운대",
+      "description": "Solenne Rivé의 크로스백입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Solenne Rivé",
+        "S등급",
+        "인증대기"
+      ],
+      "unavailableDates": [
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26"
+      ],
+      "seededReviews": [
+        {
+          "by": "하은 J.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "하은 J.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-010",
+      "name": "Aureléon 클러치",
+      "brand": "Aureléon",
+      "category": "bag",
+      "categoryKo": "가방",
+      "size": "라지",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 40000,
+      "deposit": 840000,
+      "retailValue": 2480000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-01",
+        "code": "AUTH-10070"
+      },
+      "insuranceEligible": true,
+      "color": "#4a3b2f",
+      "owner": {
+        "name": "유나 H.",
+        "rating": 4.9,
+        "reviews": 47
+      },
+      "rating": 4.8,
+      "reviewsCount": 39,
+      "location": "경기 판교",
+      "description": "Aureléon의 클러치입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "가방",
+        "Aureléon",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17"
+      ],
+      "seededReviews": [
+        {
+          "by": "태민 S.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-011",
+      "name": "Castellane 문페이즈",
+      "brand": "Castellane",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "38mm",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 44000,
+      "deposit": 550000,
+      "retailValue": 1410000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-12",
+        "code": "AUTH-10077"
+      },
+      "insuranceEligible": true,
+      "color": "#3d4f5c",
+      "owner": {
+        "name": "하은 J.",
+        "rating": 4.8,
+        "reviews": 34
+      },
+      "rating": 4.2,
+      "reviewsCount": 8,
+      "location": "서울 한남",
+      "description": "Castellane의 문페이즈입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Castellane",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      "seededReviews": [
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "서준 P.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-012",
+      "name": "Valmonté 오토매틱",
+      "brand": "Valmonté",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "40mm",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 13000,
+      "deposit": 150000,
+      "retailValue": 420000,
+      "authenticity": {
+        "status": "pending",
+        "authenticator": null,
+        "checkedDate": null,
+        "code": null
+      },
+      "insuranceEligible": true,
+      "color": "#1f2933",
+      "owner": {
+        "name": "민아 L.",
+        "rating": 5,
+        "reviews": 58
+      },
+      "rating": 4.9,
+      "reviewsCount": 38,
+      "location": "부산 해운대",
+      "description": "Valmonté의 오토매틱입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Valmonté",
+        "A등급",
+        "인증대기"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "태민 S.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-013",
+      "name": "Meridian Brûle 문페이즈",
+      "brand": "Meridian Brûle",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "44mm",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 30000,
+      "deposit": 630000,
+      "retailValue": 1530000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-13",
+        "code": "AUTH-10091"
+      },
+      "insuranceEligible": true,
+      "color": "#3d4f5c",
+      "owner": {
+        "name": "유나 H.",
+        "rating": 4.9,
+        "reviews": 47
+      },
+      "rating": 4.7,
+      "reviewsCount": 48,
+      "location": "서울 성수",
+      "description": "Meridian Brûle의 문페이즈입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Meridian Brûle",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "지현 K.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-014",
+      "name": "Meridian Brûle 크로노그래프",
+      "brand": "Meridian Brûle",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "40mm",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 124000,
+      "deposit": 1330000,
+      "retailValue": 3710000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-23",
+        "code": "AUTH-10098"
+      },
+      "insuranceEligible": true,
+      "color": "#1f2933",
+      "owner": {
+        "name": "하은 J.",
+        "rating": 4.8,
+        "reviews": 34
+      },
+      "rating": 4.5,
+      "reviewsCount": 60,
+      "location": "서울 성수",
+      "description": "Meridian Brûle의 크로노그래프입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Meridian Brûle",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "하은 J.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "서준 P.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-015",
+      "name": "Hôrvest 드레스워치",
+      "brand": "Hôrvest",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "42mm",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 57000,
+      "deposit": 1400000,
+      "retailValue": 3170000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-28",
+        "code": "AUTH-10105"
+      },
+      "insuranceEligible": true,
+      "color": "#1f2933",
+      "owner": {
+        "name": "태민 S.",
+        "rating": 4.5,
+        "reviews": 9
+      },
+      "rating": 4.5,
+      "reviewsCount": 58,
+      "location": "서울 성수",
+      "description": "Hôrvest의 드레스워치입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Hôrvest",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05"
+      ],
+      "seededReviews": [
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-016",
+      "name": "Meridian Brûle 크로노그래프",
+      "brand": "Meridian Brûle",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "38mm",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 15000,
+      "deposit": 190000,
+      "retailValue": 760000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-08",
+        "code": "AUTH-10112"
+      },
+      "insuranceEligible": false,
+      "color": "#3d4f5c",
+      "owner": {
+        "name": "지현 K.",
+        "rating": 4.9,
+        "reviews": 41
+      },
+      "rating": 4.8,
+      "reviewsCount": 48,
+      "location": "인천 송도",
+      "description": "Meridian Brûle의 크로노그래프입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Meridian Brûle",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23"
+      ],
+      "seededReviews": [
+        {
+          "by": "서준 P.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-017",
+      "name": "Valmonté 다이버",
+      "brand": "Valmonté",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "42mm",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 56000,
+      "deposit": 530000,
+      "retailValue": 1970000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-01",
+        "code": "AUTH-10119"
+      },
+      "insuranceEligible": true,
+      "color": "#4a5568",
+      "owner": {
+        "name": "지현 K.",
+        "rating": 4.9,
+        "reviews": 41
+      },
+      "rating": 4.3,
+      "reviewsCount": 6,
+      "location": "서울 여의도",
+      "description": "Valmonté의 다이버입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Valmonté",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "seededReviews": [
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "지현 K.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-018",
+      "name": "Castellane 드레스워치",
+      "brand": "Castellane",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "42mm",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 69000,
+      "deposit": 1040000,
+      "retailValue": 3520000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-12",
+        "code": "AUTH-10126"
+      },
+      "insuranceEligible": true,
+      "color": "#4a5568",
+      "owner": {
+        "name": "건우 B.",
+        "rating": 4.7,
+        "reviews": 19
+      },
+      "rating": 5,
+      "reviewsCount": 49,
+      "location": "서울 한남",
+      "description": "Castellane의 드레스워치입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Castellane",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09"
+      ],
+      "seededReviews": [
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "지현 K.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-019",
+      "name": "Hôrvest 드레스워치",
+      "brand": "Hôrvest",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "40mm",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 48000,
+      "deposit": 460000,
+      "retailValue": 1550000,
+      "authenticity": {
+        "status": "pending",
+        "authenticator": null,
+        "checkedDate": null,
+        "code": null
+      },
+      "insuranceEligible": false,
+      "color": "#1f2933",
+      "owner": {
+        "name": "서준 P.",
+        "rating": 4.7,
+        "reviews": 23
+      },
+      "rating": 4.6,
+      "reviewsCount": 57,
+      "location": "부산 해운대",
+      "description": "Hôrvest의 드레스워치입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Hôrvest",
+        "B등급",
+        "인증대기"
+      ],
+      "unavailableDates": [
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-07",
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12"
+      ],
+      "seededReviews": [
+        {
+          "by": "지현 K.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-020",
+      "name": "Meridian Brûle 드레스워치",
+      "brand": "Meridian Brûle",
+      "category": "watch",
+      "categoryKo": "시계",
+      "size": "40mm",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 98000,
+      "deposit": 1160000,
+      "retailValue": 2760000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-02",
+        "code": "AUTH-10140"
+      },
+      "insuranceEligible": true,
+      "color": "#2b3a4a",
+      "owner": {
+        "name": "민아 L.",
+        "rating": 5,
+        "reviews": 58
+      },
+      "rating": 4.7,
+      "reviewsCount": 25,
+      "location": "서울 강남",
+      "description": "Meridian Brûle의 드레스워치입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "시계",
+        "Meridian Brûle",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26"
+      ],
+      "seededReviews": [
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "태민 S.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-021",
+      "name": "Marchesi Oro 초커",
+      "brand": "Marchesi Oro",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "프리사이즈",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 54000,
+      "deposit": 1100000,
+      "retailValue": 3100000,
+      "authenticity": {
+        "status": "pending",
+        "authenticator": null,
+        "checkedDate": null,
+        "code": null
+      },
+      "insuranceEligible": false,
+      "color": "#b08fbf",
+      "owner": {
+        "name": "민아 L.",
+        "rating": 5,
+        "reviews": 58
+      },
+      "rating": 4.3,
+      "reviewsCount": 10,
+      "location": "서울 여의도",
+      "description": "Marchesi Oro의 초커입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Marchesi Oro",
+        "A등급",
+        "인증대기"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "지현 K.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-022",
+      "name": "Céribel 테니스 브레이슬릿",
+      "brand": "Céribel",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "13호",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 102000,
+      "deposit": 930000,
+      "retailValue": 2900000,
+      "authenticity": {
+        "status": "pending",
+        "authenticator": null,
+        "checkedDate": null,
+        "code": null
+      },
+      "insuranceEligible": true,
+      "color": "#d4a5c9",
+      "owner": {
+        "name": "태민 S.",
+        "rating": 4.5,
+        "reviews": 9
+      },
+      "rating": 4.6,
+      "reviewsCount": 52,
+      "location": "경기 판교",
+      "description": "Céribel의 테니스 브레이슬릿입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Céribel",
+        "B등급",
+        "인증대기"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "하은 J.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-023",
+      "name": "Émeraude Lys 테니스 브레이슬릿",
+      "brand": "Émeraude Lys",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "15호",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 11000,
+      "deposit": 120000,
+      "retailValue": 320000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-15",
+        "code": "AUTH-10161"
+      },
+      "insuranceEligible": true,
+      "color": "#b08fbf",
+      "owner": {
+        "name": "도윤 C.",
+        "rating": 4.6,
+        "reviews": 12
+      },
+      "rating": 5,
+      "reviewsCount": 25,
+      "location": "경기 판교",
+      "description": "Émeraude Lys의 테니스 브레이슬릿입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Émeraude Lys",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05"
+      ],
+      "seededReviews": [
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-024",
+      "name": "Émeraude Lys 뱅글",
+      "brand": "Émeraude Lys",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "15호",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 29000,
+      "deposit": 600000,
+      "retailValue": 1660000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-07",
+        "code": "AUTH-10168"
+      },
+      "insuranceEligible": true,
+      "color": "#6d4f7a",
+      "owner": {
+        "name": "지현 K.",
+        "rating": 4.9,
+        "reviews": 41
+      },
+      "rating": 4.6,
+      "reviewsCount": 4,
+      "location": "대구 수성",
+      "description": "Émeraude Lys의 뱅글입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Émeraude Lys",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14"
+      ],
+      "seededReviews": [
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-025",
+      "name": "Céribel 뱅글",
+      "brand": "Céribel",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "프리사이즈",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 79000,
+      "deposit": 830000,
+      "retailValue": 2930000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-06",
+        "code": "AUTH-10175"
+      },
+      "insuranceEligible": true,
+      "color": "#6d4f7a",
+      "owner": {
+        "name": "서준 P.",
+        "rating": 4.7,
+        "reviews": 23
+      },
+      "rating": 4.3,
+      "reviewsCount": 19,
+      "location": "서울 성수",
+      "description": "Céribel의 뱅글입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Céribel",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10"
+      ],
+      "seededReviews": [
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-026",
+      "name": "Émeraude Lys 테니스 브레이슬릿",
+      "brand": "Émeraude Lys",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "11호",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 45000,
+      "deposit": 870000,
+      "retailValue": 2110000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-18",
+        "code": "AUTH-10182"
+      },
+      "insuranceEligible": true,
+      "color": "#8a6d9e",
+      "owner": {
+        "name": "태민 S.",
+        "rating": 4.5,
+        "reviews": 9
+      },
+      "rating": 4.2,
+      "reviewsCount": 53,
+      "location": "대구 수성",
+      "description": "Émeraude Lys의 테니스 브레이슬릿입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Émeraude Lys",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14"
+      ],
+      "seededReviews": [
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-027",
+      "name": "Céribel 드롭 이어링",
+      "brand": "Céribel",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "프리사이즈",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 69000,
+      "deposit": 1410000,
+      "retailValue": 3210000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-15",
+        "code": "AUTH-10189"
+      },
+      "insuranceEligible": true,
+      "color": "#d4a5c9",
+      "owner": {
+        "name": "건우 B.",
+        "rating": 4.7,
+        "reviews": 19
+      },
+      "rating": 4.6,
+      "reviewsCount": 8,
+      "location": "경기 판교",
+      "description": "Céribel의 드롭 이어링입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Céribel",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-028",
+      "name": "Lunaris Fine 드롭 이어링",
+      "brand": "Lunaris Fine",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "13호",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 99000,
+      "deposit": 1230000,
+      "retailValue": 3730000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-09",
+        "code": "AUTH-10196"
+      },
+      "insuranceEligible": false,
+      "color": "#d4a5c9",
+      "owner": {
+        "name": "하은 J.",
+        "rating": 4.8,
+        "reviews": 34
+      },
+      "rating": 4.9,
+      "reviewsCount": 13,
+      "location": "부산 해운대",
+      "description": "Lunaris Fine의 드롭 이어링입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Lunaris Fine",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08",
+        "2026-11-09"
+      ],
+      "seededReviews": [
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-029",
+      "name": "Émeraude Lys 초커",
+      "brand": "Émeraude Lys",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "13호",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 104000,
+      "deposit": 790000,
+      "retailValue": 3150000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-05",
+        "code": "AUTH-10203"
+      },
+      "insuranceEligible": true,
+      "color": "#6d4f7a",
+      "owner": {
+        "name": "지현 K.",
+        "rating": 4.9,
+        "reviews": 41
+      },
+      "rating": 4.8,
+      "reviewsCount": 12,
+      "location": "서울 한남",
+      "description": "Émeraude Lys의 초커입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Émeraude Lys",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28"
+      ],
+      "seededReviews": [
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-030",
+      "name": "Émeraude Lys 다이아 링",
+      "brand": "Émeraude Lys",
+      "category": "jewelry",
+      "categoryKo": "주얼리",
+      "size": "11호",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 46000,
+      "deposit": 1150000,
+      "retailValue": 2550000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-12",
+        "code": "AUTH-10210"
+      },
+      "insuranceEligible": true,
+      "color": "#d4a5c9",
+      "owner": {
+        "name": "하은 J.",
+        "rating": 4.8,
+        "reviews": 34
+      },
+      "rating": 4.1,
+      "reviewsCount": 20,
+      "location": "서울 한남",
+      "description": "Émeraude Lys의 다이아 링입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "주얼리",
+        "Émeraude Lys",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-031",
+      "name": "Nordveil 트렌치코트",
+      "brand": "Nordveil",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "L",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 88000,
+      "deposit": 1100000,
+      "retailValue": 2490000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-09",
+        "code": "AUTH-10217"
+      },
+      "insuranceEligible": true,
+      "color": "#5c6f5f",
+      "owner": {
+        "name": "도윤 C.",
+        "rating": 4.6,
+        "reviews": 12
+      },
+      "rating": 4.2,
+      "reviewsCount": 48,
+      "location": "서울 여의도",
+      "description": "Nordveil의 트렌치코트입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Nordveil",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-032",
+      "name": "Beaumont Frères 이브닝 가운",
+      "brand": "Beaumont Frères",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "XL",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 61000,
+      "deposit": 640000,
+      "retailValue": 2250000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-17",
+        "code": "AUTH-10224"
+      },
+      "insuranceEligible": true,
+      "color": "#7c8c6f",
+      "owner": {
+        "name": "서준 P.",
+        "rating": 4.7,
+        "reviews": 23
+      },
+      "rating": 4.5,
+      "reviewsCount": 1,
+      "location": "부산 해운대",
+      "description": "Beaumont Frères의 이브닝 가운입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Beaumont Frères",
+        "S등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29"
+      ],
+      "seededReviews": [
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-033",
+      "name": "Nordveil 이브닝 가운",
+      "brand": "Nordveil",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "M",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 25000,
+      "deposit": 320000,
+      "retailValue": 1120000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-14",
+        "code": "AUTH-10231"
+      },
+      "insuranceEligible": true,
+      "color": "#3a4a3f",
+      "owner": {
+        "name": "유나 H.",
+        "rating": 4.9,
+        "reviews": 47
+      },
+      "rating": 4.9,
+      "reviewsCount": 10,
+      "location": "서울 한남",
+      "description": "Nordveil의 이브닝 가운입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Nordveil",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17"
+      ],
+      "seededReviews": [
+        {
+          "by": "하은 J.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-034",
+      "name": "Verdant Mode 트위드 자켓",
+      "brand": "Verdant Mode",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "XS",
+      "condition": "S",
+      "conditionLabel": "최상급 (미사용에 가까움)",
+      "dailyRate": 92000,
+      "deposit": 830000,
+      "retailValue": 2690000,
+      "authenticity": {
+        "status": "pending",
+        "authenticator": null,
+        "checkedDate": null,
+        "code": null
+      },
+      "insuranceEligible": true,
+      "color": "#5c6f5f",
+      "owner": {
+        "name": "태민 S.",
+        "rating": 4.5,
+        "reviews": 9
+      },
+      "rating": 4.8,
+      "reviewsCount": 51,
+      "location": "서울 한남",
+      "description": "Verdant Mode의 트위드 자켓입니다. 상태 S등급, 최상급 (미사용에 가까움). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Verdant Mode",
+        "S등급",
+        "인증대기"
+      ],
+      "unavailableDates": [
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      "seededReviews": [
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "서준 P.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-035",
+      "name": "Atélier Sauveterre 이브닝 가운",
+      "brand": "Atélier Sauveterre",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "L",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 101000,
+      "deposit": 1300000,
+      "retailValue": 3190000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-05",
+        "code": "AUTH-10245"
+      },
+      "insuranceEligible": true,
+      "color": "#3a4a3f",
+      "owner": {
+        "name": "태민 S.",
+        "rating": 4.5,
+        "reviews": 9
+      },
+      "rating": 4.6,
+      "reviewsCount": 24,
+      "location": "서울 여의도",
+      "description": "Atélier Sauveterre의 이브닝 가운입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Atélier Sauveterre",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11"
+      ],
+      "seededReviews": [
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "태민 S.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-036",
+      "name": "Atélier Sauveterre 트렌치코트",
+      "brand": "Atélier Sauveterre",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "S",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 40000,
+      "deposit": 490000,
+      "retailValue": 1730000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-23",
+        "code": "AUTH-10252"
+      },
+      "insuranceEligible": true,
+      "color": "#5c6f5f",
+      "owner": {
+        "name": "태민 S.",
+        "rating": 4.5,
+        "reviews": 9
+      },
+      "rating": 4.3,
+      "reviewsCount": 47,
+      "location": "경기 판교",
+      "description": "Atélier Sauveterre의 트렌치코트입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Atélier Sauveterre",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "하은 J.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "민아 L.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-037",
+      "name": "Atélier Sauveterre 트렌치코트",
+      "brand": "Atélier Sauveterre",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "XS",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 27000,
+      "deposit": 330000,
+      "retailValue": 820000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-05",
+        "code": "AUTH-10259"
+      },
+      "insuranceEligible": false,
+      "color": "#5c6f5f",
+      "owner": {
+        "name": "도윤 C.",
+        "rating": 4.6,
+        "reviews": 12
+      },
+      "rating": 4.9,
+      "reviewsCount": 51,
+      "location": "서울 한남",
+      "description": "Atélier Sauveterre의 트렌치코트입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Atélier Sauveterre",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [],
+      "seededReviews": [
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-038",
+      "name": "Atélier Sauveterre 실크 드레스",
+      "brand": "Atélier Sauveterre",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "L",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 22000,
+      "deposit": 220000,
+      "retailValue": 710000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-09",
+        "code": "AUTH-10266"
+      },
+      "insuranceEligible": true,
+      "color": "#2f3b33",
+      "owner": {
+        "name": "서준 P.",
+        "rating": 4.7,
+        "reviews": 23
+      },
+      "rating": 4.7,
+      "reviewsCount": 10,
+      "location": "대구 수성",
+      "description": "Atélier Sauveterre의 실크 드레스입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Atélier Sauveterre",
+        "B등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11"
+      ],
+      "seededReviews": [
+        {
+          "by": "서준 P.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "도윤 C.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-039",
+      "name": "Nordveil 이브닝 가운",
+      "brand": "Nordveil",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "XL",
+      "condition": "A",
+      "conditionLabel": "상급 (사용감 거의 없음)",
+      "dailyRate": 96000,
+      "deposit": 1030000,
+      "retailValue": 3670000,
+      "authenticity": {
+        "status": "verified",
+        "authenticator": "씨엘 정품인증 랩(모의)",
+        "checkedDate": "2026-08-16",
+        "code": "AUTH-10273"
+      },
+      "insuranceEligible": true,
+      "color": "#7c8c6f",
+      "owner": {
+        "name": "지현 K.",
+        "rating": 4.9,
+        "reviews": 41
+      },
+      "rating": 4.2,
+      "reviewsCount": 56,
+      "location": "서울 성수",
+      "description": "Nordveil의 이브닝 가운입니다. 상태 A등급, 상급 (사용감 거의 없음). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Nordveil",
+        "A등급",
+        "정품인증"
+      ],
+      "unavailableDates": [
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04"
+      ],
+      "seededReviews": [
+        {
+          "by": "유나 H.",
+          "role": "renter",
+          "rating": 4,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "건우 B.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    },
+    {
+      "id": "LR-040",
+      "name": "Verdant Mode 트렌치코트",
+      "brand": "Verdant Mode",
+      "category": "clothing",
+      "categoryKo": "의류",
+      "size": "L",
+      "condition": "B",
+      "conditionLabel": "중상급 (약간의 사용감)",
+      "dailyRate": 65000,
+      "deposit": 800000,
+      "retailValue": 2620000,
+      "authenticity": {
+        "status": "pending",
+        "authenticator": null,
+        "checkedDate": null,
+        "code": null
+      },
+      "insuranceEligible": true,
+      "color": "#5c6f5f",
+      "owner": {
+        "name": "유나 H.",
+        "rating": 4.9,
+        "reviews": 47
+      },
+      "rating": 4.8,
+      "reviewsCount": 27,
+      "location": "서울 한남",
+      "description": "Verdant Mode의 트렌치코트입니다. 상태 B등급, 중상급 (약간의 사용감). 정성껏 보관해온 아이템으로, 특별한 날 부담 없이 경험해 보세요. 반납 시 검수 체크리스트를 함께 진행합니다.",
+      "tags": [
+        "의류",
+        "Verdant Mode",
+        "B등급",
+        "인증대기"
+      ],
+      "unavailableDates": [
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-09",
+        "2026-10-10"
+      ],
+      "seededReviews": [
+        {
+          "by": "태민 S.",
+          "role": "renter",
+          "rating": 5,
+          "text": "사진과 동일한 상태였고 소유자분이 매우 친절했어요."
+        },
+        {
+          "by": "서준 P.",
+          "role": "renter",
+          "rating": 4,
+          "text": "대여/반납 절차가 깔끔했습니다. 보증금도 바로 환급됐어요."
+        }
+      ]
+    }
+  ]
+}
