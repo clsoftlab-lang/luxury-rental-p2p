@@ -4,12 +4,14 @@
 // check.mjs — CI 검증: JSON 파싱, index.html 필수 컨테이너, pricing.js 산식 단위 테스트.
 // (node --check 로 전체 JS 문법 검사는 CI 워크플로우에서 별도 수행)
 
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
+import { dirname, join, extname, relative } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import {
   rentalDays, periodDiscount, insuranceFee, computeQuote, formatKRW, DEFAULT_PRICING,
 } from './pricing.js';
+import { AI_ENDPOINT } from './ai/config.js';
 
 const root = dirname(fileURLToPath(import.meta.url));
 let pass = 0, fail = 0;
@@ -104,6 +106,51 @@ eq(insuranceFee(1000000, 0), 0, '일수 0이면 보험료 0');
 // formatKRW
 eq(formatKRW(1234567), '₩1,234,567', 'formatKRW 천단위 콤마');
 eq(formatKRW(0), '₩0', 'formatKRW 0원');
+
+// ---------- 4. AI 레이어: node --check on ai/ + server/ ----------
+function jsFilesIn(dir) {
+  const abs = join(root, dir);
+  if (!existsSync(abs)) return [];
+  return readdirSync(abs)
+    .filter((f) => f.endsWith('.js') || f.endsWith('.mjs'))
+    .map((f) => join(abs, f));
+}
+const aiServerFiles = [...jsFilesIn('ai'), ...jsFilesIn('server')];
+ok(aiServerFiles.length >= 3, `ai/ + server/ 에 JS 파일 존재 (실제 ${aiServerFiles.length})`);
+for (const f of aiServerFiles) {
+  try {
+    execFileSync(process.execPath, ['--check', f], { stdio: 'pipe' });
+    pass++;
+  } catch (e) {
+    fail++; fails.push(`node --check 실패: ${relative(root, f)} — ${(e.stderr || e.message || '').toString().trim()}`);
+  }
+}
+
+// ---------- 5. AI_ENDPOINT 는 비어 있어야 함 (데모=목업, 키 없이 동작) ----------
+ok(AI_ENDPOINT === '', `ai/config.js 의 AI_ENDPOINT 는 빈 문자열 (실제 "${AI_ENDPOINT}")`);
+
+// ---------- 6. 실제 API 키 형식 유출 스캔 ----------
+// 스캐너 자신이 매칭되지 않도록 접두어를 런타임에 조립합니다.
+const KEY_RE = new RegExp('sk-' + 'ant-[A-Za-z0-9_-]{20,}');
+const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.cache', '.tmp']);
+const SCAN_EXT = new Set(['.js', '.mjs', '.json', '.md', '.html', '.css', '.yml', '.yaml', '.txt', '.example', '.env', '']);
+const leaks = [];
+function scan(dir) {
+  for (const name of readdirSync(dir)) {
+    if (SKIP_DIRS.has(name)) continue;
+    const p = join(dir, name);
+    const st = statSync(p);
+    if (st.isDirectory()) { scan(p); continue; }
+    if (st.size > 2_000_000) continue;
+    const ext = extname(name).toLowerCase();
+    if (!SCAN_EXT.has(ext) && !name.startsWith('.env')) continue;
+    let text;
+    try { text = readFileSync(p, 'utf8'); } catch { continue; }
+    if (KEY_RE.test(text)) leaks.push(relative(root, p));
+  }
+}
+scan(root);
+ok(leaks.length === 0, `실제 API 키 형식 유출 없음${leaks.length ? ' — ' + leaks.join(', ') : ''}`);
 
 // ---------- 결과 ----------
 console.log(`\ncheck.mjs — PASS ${pass} / FAIL ${fail}`);

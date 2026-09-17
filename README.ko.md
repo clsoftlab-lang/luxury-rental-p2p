@@ -47,6 +47,38 @@ English docs: [README.md](./README.md)
 
 ---
 
+## 🤖 AI 기능 (API 연동)
+
+LuxeLoop는 **안전하고 플러그블한 AI 레이어**를 제공하며, 3가지 기능이 있습니다:
+
+1. **AI 대여 상담 챗봇** (`#/assistant`) — 상황·예산·기간에 맞춰 카탈로그(가상 브랜드) 안에서 아이템을 추천합니다.
+2. **코디/스타일링 추천** — 아이템 상세 페이지에서 서술형 스타일링을 제안합니다.
+3. **정품 인증·안전 거래 안내 생성** — 안전장치 페이지에서 정품 인증·보증금·보험 흐름 안내문을 생성합니다(실제 감정 필요성 강조).
+
+**데모는 결정론적 목업(mock)으로 동작합니다.** `ai/config.js`의 `AI_ENDPOINT = ""`(기본값)이면 브라우저에서
+결정론적 한국어 **MockProvider**가 앱의 실제 아이템 카탈로그와 `pricing.js` 견적 엔진을 재사용해 응답합니다 —
+키·네트워크 없이 항상 동작합니다.
+
+**실제 Claude 연동**은 [`server/`](./server/) 백엔드 프록시로 활성화합니다:
+
+```bash
+cd server && cp .env.example .env   # .env 에 ANTHROPIC_API_KEY 입력
+npm install && npm start            # http://localhost:8787/api/ai
+```
+
+그런 다음 `ai/config.js`를 설정하세요:
+
+```js
+export const AI_ENDPOINT = "http://localhost:8787/api/ai";
+```
+
+프록시는 `@anthropic-ai/sdk`로 Claude(모델 **`claude-opus-5`**)를 호출하고 응답을 브라우저로 스트리밍합니다.
+
+> **🔒 API 키는 오직 서버(백엔드)에만 둡니다.** `ANTHROPIC_API_KEY`는 `server/.env`(git 제외)에만 존재합니다.
+> **브라우저·리포지토리에는 절대 키를 넣지 마세요** — 프론트엔드는 프록시 URL만 호출합니다.
+
+---
+
 ## 로컬 실행
 
 의존성 없음. ES 모듈은 `file://`가 아닌 `http://`가 필요하므로 폴더를 HTTP로 서빙하세요:

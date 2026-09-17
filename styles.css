@@ -255,3 +255,25 @@ main { min-height: 60vh; }
   .checklist-static { columns: 1; }
   .hero-inner { padding: 34px 16px 28px; }
 }
+
+/* ---------- AI 기능 (챗봇 · 코디 추천 · 안전 거래 안내) ---------- */
+.ai-panel { display: flex; flex-direction: column; gap: 14px; }
+.ai-out { white-space: pre-wrap; line-height: 1.65; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 16px; font-size: .95rem; color: var(--ink); }
+.ai-out-holder { white-space: pre-wrap; line-height: 1.65; border-radius: var(--radius-sm); padding: 16px; }
+.ai-cursor { color: var(--gold); animation: ai-blink 1s steps(2, start) infinite; font-weight: 700; }
+@keyframes ai-blink { to { opacity: 0; } }
+.ai-error { color: var(--danger); margin: 8px 0 0; }
+.ai-mode { color: var(--ink-soft); }
+
+.ai-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 4px; }
+.chip-btn { cursor: pointer; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 7px 13px; font-size: .85rem; }
+.chip-btn:hover { border-color: var(--gold); color: var(--gold-deep); }
+
+.ai-chat-log { display: flex; flex-direction: column; gap: 12px; max-height: 52vh; overflow-y: auto; padding: 4px; }
+.ai-msg { display: flex; }
+.ai-msg.user { justify-content: flex-end; }
+.ai-bubble { max-width: 85%; padding: 12px 15px; border-radius: 14px; line-height: 1.6; white-space: pre-wrap; font-size: .93rem; }
+.ai-msg.user .ai-bubble { background: var(--gold); color: #fff; border-bottom-right-radius: 4px; }
+.ai-msg.bot .ai-bubble { background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+.ai-chat-form { display: flex; gap: 8px; margin-top: 4px; }
+.ai-input { flex: 1; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); font-size: .95rem; }

@@ -1,5 +1,12 @@
-# dependencies (none required — no-build static site)
+# dependencies (none required for the demo — server/ uses npm)
 node_modules/
+
+# secrets — API keys live in server/.env ONLY, never committed
+.env
+.env.local
+*.env
+!.env.example
+server/.env
 
 # logs
 *.log

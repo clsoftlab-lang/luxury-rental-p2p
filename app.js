@@ -7,6 +7,7 @@
 import { computeQuote, formatKRW, rentalDays } from './pricing.js';
 import * as store from './storage.js';
 import { itemSVG } from './svg.js';
+import { askAI, isMock } from './ai/ai.js';
 
 const state = {
   config: null,
@@ -120,6 +121,7 @@ function renderChrome() {
       el('span', { class: 'brand-mark', html: '◈' }), el('span', {}, 'Luxe'), el('em', {}, 'Loop')),
     el('nav', { class: 'nav' },
       el('a', { href: '#/browse' }, '탐색'),
+      el('a', { href: '#/assistant' }, 'AI 상담'),
       el('a', { href: '#/protection' }, '안전장치'),
       el('a', { href: '#/list' }, '내 물건 등록'),
       el('a', { href: '#/wishlist' }, `위시리스트${wl ? ` (${wl})` : ''}`),
@@ -322,6 +324,7 @@ function viewItem(id) {
     el('div', { class: 'detail-top' }, gallery, info),
     el('section', { class: 'panel' }, el('h2', {}, '대여 가능 날짜'),
       calendar(item, null, null, () => { location.hash = `#/book/${item.id}`; })),
+    aiStylingPanel(item),
     reviewsSection(item)
   );
   return wrap;
@@ -637,7 +640,8 @@ function viewProtection() {
       protoCard('정품 인증 배지', '로고·각인·소재·시리얼을 검수해 인증 코드를 발급합니다. 대여자는 배지로 신뢰도를 즉시 확인합니다.'),
       protoCard('보증금 에스크로', '대여자 보증금을 안전하게 예치하고 정상 반납 시 환급합니다. 분쟁 시 검수 결과에 따라 정산합니다.'),
       protoCard('손상·분실 보험', '선택형 일일 보험료로 예기치 못한 손상·분실을 커버합니다. 자기부담금이 적용됩니다.'),
-      protoCard('양방향 리뷰', '대여자·소유자가 서로 평가해 커뮤니티 신뢰를 축적합니다. 반복 불량 사용자는 자연스럽게 걸러집니다.')));
+      protoCard('양방향 리뷰', '대여자·소유자가 서로 평가해 커뮤니티 신뢰를 축적합니다. 반복 불량 사용자는 자연스럽게 걸러집니다.')),
+    aiSafetyPanel());
   return wrap;
 }
 
@@ -656,6 +660,108 @@ function viewWishlist() {
   return wrap;
 }
 
+// ---------- AI 기능 ----------
+// 스트리밍 응답을 target 요소에 흘려 렌더링하는 공통 헬퍼.
+// btn 을 비활성화/복원하고, 오류를 안전하게 표시합니다.
+async function runAI(task, payload, target, btn) {
+  const prevLabel = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = '생성 중…'; }
+  target.classList.add('ai-out');
+  target.classList.remove('empty');
+  target.textContent = '';
+  const cursor = el('span', { class: 'ai-cursor' }, '▌');
+  target.append(cursor);
+  try {
+    await askAI(task, payload, {
+      onToken: (chunk) => { cursor.before(document.createTextNode(chunk)); },
+    });
+    cursor.remove();
+  } catch (err) {
+    cursor.remove();
+    target.append(el('p', { class: 'ai-error' }, 'AI 응답을 가져오지 못했습니다: ' + (err && err.message || err)));
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = prevLabel; }
+  }
+}
+
+function aiModeNote() {
+  return el('p', { class: 'fine ai-mode' },
+    isMock()
+      ? '현재 데모(목업) 모드입니다 — 실제 카탈로그·요금 엔진 기반의 결정론적 한국어 응답입니다. 실제 Claude 연동은 server/ 프록시 + AI_ENDPOINT 설정으로 활성화됩니다.'
+      : '실제 Claude 연동 모드입니다 (백엔드 프록시 경유).');
+}
+
+// (1) 대여 상담 챗봇 뷰
+function viewAssistant() {
+  refreshItems();
+  const wrap = el('div', { class: 'wrap assistant' });
+  const log = el('div', { class: 'ai-chat-log' });
+
+  function addUser(text) { log.append(el('div', { class: 'ai-msg user' }, el('div', { class: 'ai-bubble' }, text))); log.scrollTop = log.scrollHeight; }
+  function addBot() {
+    const body = el('div', { class: 'ai-bubble bot-bubble' });
+    log.append(el('div', { class: 'ai-msg bot' }, body));
+    log.scrollTop = log.scrollHeight;
+    return body;
+  }
+
+  const input = el('input', { type: 'text', class: 'ai-input', placeholder: '예: 결혼식 하객룩, 일일 12만원 이하 주얼리 추천해줘', maxlength: '200' });
+  const sendBtn = el('button', { class: 'btn btn-primary', type: 'submit' }, '보내기');
+
+  async function submit(message) {
+    const msg = (message || '').trim();
+    if (!msg) return;
+    addUser(msg);
+    input.value = '';
+    const body = addBot();
+    sendBtn.disabled = true;
+    await runAI('chat', { message: msg, items: state.items, pricing: state.config.pricing }, body, null);
+    sendBtn.disabled = false;
+    log.scrollTop = log.scrollHeight;
+  }
+
+  const form = el('form', { class: 'ai-chat-form', onsubmit: (e) => { e.preventDefault(); submit(input.value); } }, input, sendBtn);
+
+  const chips = el('div', { class: 'ai-chips' },
+    ...[
+      '결혼식 하객룩, 일일 12만원 이하 주얼리 추천해줘',
+      '10월 1일~7일 여행에 어울리는 가방 추천',
+      '비즈니스 미팅용 시계 추천해줘',
+    ].map((q) => el('button', { class: 'chip chip-btn', type: 'button', onclick: () => submit(q) }, q)));
+
+  // 첫 안내 메시지 (목업으로 즉시 렌더)
+  const intro = addBot();
+  runAI('chat', { message: '', items: state.items, pricing: state.config.pricing }, intro, null);
+
+  wrap.append(
+    el('div', { class: 'browse-head' }, el('h1', {}, 'AI 대여 상담'), el('span', { class: 'badge badge-verified' }, isMock() ? '데모(목업)' : 'Claude 연동')),
+    el('p', { class: 'muted' }, '상황·예산·기간을 알려주시면 카탈로그에서 어울리는 아이템을 추천해 드려요.'),
+    chips,
+    el('section', { class: 'panel ai-panel' }, log, form),
+    aiModeNote());
+  return wrap;
+}
+
+// (2) 코디/스타일링 추천 패널 (아이템 상세에 삽입)
+function aiStylingPanel(item) {
+  const sec = el('section', { class: 'panel ai-panel' });
+  const out = el('div', { class: 'ai-out-holder muted' }, 'AI 코디 추천을 생성하려면 아래 버튼을 눌러주세요.');
+  const btn = el('button', { class: 'btn btn-ghost' }, '✨ AI 코디/스타일링 추천');
+  btn.addEventListener('click', () => runAI('styling', { item, items: state.items }, out, btn));
+  sec.append(el('h2', {}, 'AI 코디/스타일링 추천'), btn, out, aiModeNote());
+  return sec;
+}
+
+// (3) 정품 인증·안전 거래 안내 생성 패널 (안전장치 페이지에 삽입)
+function aiSafetyPanel() {
+  const sec = el('section', { class: 'panel ai-panel' });
+  const out = el('div', { class: 'ai-out-holder muted' }, 'AI로 정품 인증·안전 거래 안내문을 생성할 수 있어요.');
+  const btn = el('button', { class: 'btn btn-primary' }, '🛡 AI 안전 거래 안내 생성');
+  btn.addEventListener('click', () => runAI('authenticity', {}, out, btn));
+  sec.append(el('h2', {}, 'AI 정품 인증·안전 거래 안내'), btn, out, aiModeNote());
+  return sec;
+}
+
 // ---------- router ----------
 function route() {
   const hash = location.hash || '#/';
@@ -668,6 +774,7 @@ function route() {
   else if (path.startsWith('#/item/')) view = viewItem(decodeURIComponent(path.slice(7)));
   else if (path.startsWith('#/book/')) view = viewBook(decodeURIComponent(path.slice(7)));
   else if (path === '#/list') view = viewList();
+  else if (path === '#/assistant') view = viewAssistant();
   else if (path === '#/protection') view = viewProtection();
   else if (path === '#/wishlist') view = viewWishlist();
   else if (path === '#/bookings') view = viewBookings(query);

@@ -49,6 +49,38 @@ feature rather than an afterthought:
 
 ---
 
+## 🤖 AI 기능 (API 연동)
+
+LuxeLoop ships a **secure, pluggable AI layer** with three features:
+
+1. **AI 대여 상담 챗봇** (`#/assistant`) — recommends items by occasion / budget / dates, drawn only from the catalog (fictional brands).
+2. **코디/스타일링 추천** — narrative styling suggestions on each item detail page.
+3. **정품 인증·안전 거래 안내 생성** — generates the authenticity / deposit / insurance workflow guide on the protection page (emphasizes that real authentication is required).
+
+**Demo mode uses a deterministic mock.** With `ai/config.js` `AI_ENDPOINT = ""` (default), the browser runs a
+deterministic Korean **MockProvider** that reuses the app's real item catalog and the `pricing.js` quote engine —
+no key, no network, always works.
+
+**Enable real Claude** via the backend proxy in [`server/`](./server/):
+
+```bash
+cd server && cp .env.example .env   # put your key in .env
+npm install && npm start            # http://localhost:8787/api/ai
+```
+
+Then set `ai/config.js`:
+
+```js
+export const AI_ENDPOINT = "http://localhost:8787/api/ai";
+```
+
+The proxy calls Claude (model **`claude-opus-5`**) with `@anthropic-ai/sdk` and streams the response to the browser.
+
+> **🔒 API keys are SERVER-SIDE ONLY.** The `ANTHROPIC_API_KEY` lives exclusively in `server/.env` (git-ignored).
+> **Never put a key in the browser or the repository** — the frontend only ever calls the proxy URL.
+
+---
+
 ## Run locally
 
 No dependencies. Just serve the folder over HTTP (ES modules need `http://`, not `file://`):
