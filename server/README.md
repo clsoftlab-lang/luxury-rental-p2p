@@ -43,10 +43,33 @@ export const AI_ENDPOINT = "http://localhost:8787/api/ai";
 - `task`: `"chat"`(대여 상담), `"styling"`(코디 추천), `"authenticity"`(안전 거래 안내)
 - 응답: `text/plain` 스트림 (토큰 델타를 순서대로 전송)
 
-## 구현 메모
+## 구현 메모 (저비용 설계)
 
-- 모델: `claude-opus-5`, `max_tokens: 2048`, `thinking: { type: "adaptive" }`
-- `@anthropic-ai/sdk` 의 `client.messages.stream(...)` 사용, `text` 이벤트를 응답 본문으로 흘려보냄
+- 모델: 기본 `claude-haiku-4-5` (비용 우선). `AI_MODEL` 로 `claude-sonnet-5`/`claude-opus-5` 상향 가능
+- **프롬프트 캐싱**: 태스크별 시스템 프롬프트를 `cache_control:{type:'ephemeral'}` 블록으로 전송 → 반복 호출 시 캐시 read 로 비용 절감
+- **thinking/effort**: `claude-haiku*` 는 adaptive thinking/effort 미지원 → 전송하지 않음(400 방지). 그 외 모델은 `thinking:{type:'adaptive'}` + `output_config:{effort: AI_EFFORT || 'low'}`
+- **출력 상한**: 태스크별 `max_tokens` 를 낮게(chat/styling 700, authenticity 900) 유지
+- **비용 가드레일**: IP별 분당 호출 제한(`AI_RATE_LIMIT_PER_MIN`, 기본 20) + 월간 토큰 예산(`AI_MONTHLY_TOKEN_CAP`, 기본 2,000,000). 초과 시 `429 {fallback:true}` → 프론트가 목업으로 자동 폴백
+- `@anthropic-ai/sdk` 의 `client.messages.stream(...)` 사용, `text` 이벤트를 응답 본문으로 흘려보냄. 스트림 최종 메시지의 `usage` 로 월간 토큰 누적
 - CORS 허용 (`CORS_ORIGIN`, 기본 `*` — 운영에서는 프론트 오리진으로 제한 권장)
+
+## ☁️ Cloudflare Workers 원클릭 배포 (무인·무료 티어)
+
+서버를 관리할 필요 없이(무료 티어) 항상 켜져 있는 무인 배포입니다. `worker.js` 는 Node 프록시와
+동일한 task 라우팅 + 모델/캐싱/thinking 규칙으로 Anthropic REST(`POST /v1/messages`)를 직접 호출합니다.
+
+```bash
+cd server
+npm i -g wrangler                       # 최초 1회
+wrangler login                          # Cloudflare 계정 로그인
+wrangler secret put ANTHROPIC_API_KEY   # 키는 Secret 으로만 주입 (리포/브라우저 금지)
+wrangler deploy                         # https://luxeloop-ai-proxy.<계정>.workers.dev
+```
+
+배포 후 프론트 `ai/config.js` 의 `AI_ENDPOINT` 를 Worker URL(`.../api/ai`)로 설정하면 됩니다.
+모델/비용은 `wrangler.toml` 의 `[vars] AI_MODEL` 로 조절합니다.
+
+> **🔒 키는 오직 서버/Worker Secret 에만.** 브라우저·리포지토리에는 절대 두지 않습니다.
+> 호출이 실패하거나 429 가 반환돼도 프론트는 목업으로 자동 폴백하므로 앱은 멈추지 않습니다(무인).
 
 *Not an official Anthropic product.*

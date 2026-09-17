@@ -1,0 +1,19 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 CLSOFTLAB (씨엘소프트랩), Dr. Lee Il-guk (이일국)
+#
+# Cloudflare Workers 설정 — 무인·무료 티어로 LuxeLoop AI 프록시를 배포합니다.
+# API 키는 Worker Secret 으로만 주입하세요:  wrangler secret put ANTHROPIC_API_KEY
+# (키를 이 파일이나 리포지토리에 절대 넣지 마세요.)
+
+name = "luxeloop-ai-proxy"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+# 비용/품질 조절용 (선택). 기본은 비용 우선 claude-haiku-4-5.
+# 상향하려면 값을 claude-sonnet-5 또는 claude-opus-5 로 바꾸세요.
+[vars]
+AI_MODEL = "claude-haiku-4-5"
+AI_EFFORT = "low"
+
+# ANTHROPIC_API_KEY 는 [vars] 가 아니라 Secret 으로 설정합니다:
+#   wrangler secret put ANTHROPIC_API_KEY

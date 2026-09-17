@@ -8,6 +8,15 @@
 // ⚠ 보안: API 키(ANTHROPIC_API_KEY)는 오직 이 백엔드(서버 프로세스)에만 존재합니다.
 //         브라우저/리포지토리에는 절대 키를 두지 마세요. 프론트엔드는 이 프록시만 호출합니다.
 //
+// 🪙 저비용(cost-efficient) 설계:
+//   • 기본 모델은 비용 우선(claude-haiku-4-5). AI_MODEL 로 상향 가능
+//     (claude-sonnet-5 / claude-opus-5 → 품질↑·비용↑).
+//   • 프롬프트 캐싱: 태스크별 (안정적인) 시스템 프롬프트를 cache_control 블록으로 전송해
+//     반복 호출 시 캐시를 읽어 비용을 절감합니다.
+//   • 출력 상한(max_tokens)을 태스크에 맞게 낮게 유지합니다.
+//   • 비용 가드레일: IP별 분당 호출 제한 + 월간 토큰 예산. 초과 시 429 {fallback:true}
+//     로 응답하여 프론트가 목업으로 자동 폴백(무인)합니다.
+//
 // 실행:
 //   cd server && cp .env.example .env  # .env 에 ANTHROPIC_API_KEY 입력
 //   npm install && npm start
@@ -17,12 +26,18 @@ import http from 'node:http';
 import Anthropic from '@anthropic-ai/sdk';
 
 const PORT = Number(process.env.PORT) || 8787;
-const MODEL = 'claude-opus-5';
+// 비용 우선 기본 모델. 품질이 더 필요하면 AI_MODEL 을 claude-sonnet-5 또는 claude-opus-5 로 올리세요.
+const MODEL = process.env.AI_MODEL || 'claude-haiku-4-5';
 const ORIGIN = process.env.CORS_ORIGIN || '*';
+
+// 비용 가드레일 설정
+const RATE_LIMIT_PER_MIN = Number(process.env.AI_RATE_LIMIT_PER_MIN) || 20; // IP별 분당 호출 상한
+const MONTHLY_TOKEN_CAP = Number(process.env.AI_MONTHLY_TOKEN_CAP) || 2_000_000; // 월간 토큰 예산
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-// task 별 시스템 프롬프트 — 가상 브랜드만 사용, 실제 정품 감정 필요성 강조
+// task 별 시스템 프롬프트 — 가상 브랜드만 사용, 실제 정품 감정 필요성 강조.
+// (안정적이므로 프롬프트 캐싱 대상)
 const SYSTEMS = {
   chat:
     '당신은 명품 공유 P2P 대여 플랫폼 "LuxeLoop"의 한국어 대여 상담 도우미입니다. ' +
@@ -36,6 +51,36 @@ const SYSTEMS = {
     '당신은 명품 P2P 안전 거래 안내 도우미입니다. 정품 인증·보증금 에스크로·손상/분실 보험·반납 검수 워크플로우를 한국어로 설명하세요. ' +
     '실제 정품 판별에는 전문 감정이 반드시 필요함을 분명히 강조하고, 본 플랫폼의 인증/에스크로/보험/결제가 시뮬레이션(데모)임을 알리세요.',
 };
+
+// task 별 출력 상한 — 필요한 만큼만(비용 절감). 기본 700.
+const MAX_TOKENS = { chat: 700, styling: 700, authenticity: 900 };
+
+// ---- 비용 가드레일: IP별 분당 rate limit (in-memory sliding window) ----
+const hits = new Map(); // ip -> number[] (최근 호출 타임스탬프)
+function rateLimited(ip) {
+  const now = Date.now();
+  const windowStart = now - 60_000;
+  const arr = (hits.get(ip) || []).filter((t) => t > windowStart);
+  arr.push(now);
+  hits.set(ip, arr);
+  return arr.length > RATE_LIMIT_PER_MIN;
+}
+
+// ---- 비용 가드레일: 월간 토큰 예산 ----
+let usage = { month: monthKey(), tokens: 0 };
+function monthKey() { const d = new Date(); return `${d.getUTCFullYear()}-${d.getUTCMonth()}`; }
+function budgetExceeded() {
+  const mk = monthKey();
+  if (usage.month !== mk) usage = { month: mk, tokens: 0 }; // 월 바뀌면 리셋
+  return usage.tokens >= MONTHLY_TOKEN_CAP;
+}
+function addUsage(u) {
+  if (!u) return;
+  const t = (u.input_tokens || 0) + (u.output_tokens || 0)
+    + (u.cache_creation_input_tokens || 0) + (u.cache_read_input_tokens || 0);
+  if (usage.month !== monthKey()) usage = { month: monthKey(), tokens: 0 };
+  usage.tokens += t;
+}
 
 function send(res, status, body, extraHeaders = {}) {
   res.writeHead(status, {
@@ -53,6 +98,16 @@ const server = http.createServer((req, res) => {
     return send(res, 404, JSON.stringify({ error: 'Not found' }), { 'Content-Type': 'application/json' });
   }
 
+  // 비용 가드레일 — 초과 시 429 {fallback:true} 로 프론트 목업 폴백 유도 (무인)
+  const ip = (req.headers['x-forwarded-for'] || '').toString().split(',')[0].trim()
+    || req.socket.remoteAddress || 'unknown';
+  if (rateLimited(ip)) {
+    return send(res, 429, JSON.stringify({ fallback: true, reason: 'rate_limit' }), { 'Content-Type': 'application/json' });
+  }
+  if (budgetExceeded()) {
+    return send(res, 429, JSON.stringify({ fallback: true, reason: 'monthly_token_cap' }), { 'Content-Type': 'application/json' });
+  }
+
   let raw = '';
   req.on('data', (c) => { raw += c; if (raw.length > 1_000_000) req.destroy(); });
   req.on('end', async () => {
@@ -64,11 +119,25 @@ const server = http.createServer((req, res) => {
     } catch {
       return send(res, 400, JSON.stringify({ error: 'Invalid JSON body' }), { 'Content-Type': 'application/json' });
     }
-    const system = SYSTEMS[task] || SYSTEMS.chat;
+    const systemText = SYSTEMS[task] || SYSTEMS.chat;
+    // 프롬프트 캐싱: 안정적인 시스템 프롬프트를 ephemeral 캐시 블록으로 전송 → 반복 호출 비용 절감
+    const system = [{ type: 'text', text: systemText, cache_control: { type: 'ephemeral' } }];
     const messages = [{
       role: 'user',
       content: `task=${task}\n\n다음 JSON 컨텍스트를 바탕으로 한국어로 답하세요:\n${JSON.stringify(payload)}`,
     }];
+
+    // 모델별 thinking/effort 규칙: Haiku 4.5 는 adaptive thinking/effort 미지원 → 아무 것도 보내지 않음 (400 방지)
+    const params = {
+      model: MODEL,
+      max_tokens: MAX_TOKENS[task] || 700,
+      system,
+      messages,
+    };
+    if (!MODEL.startsWith('claude-haiku')) {
+      params.thinking = { type: 'adaptive' };
+      params.output_config = { effort: process.env.AI_EFFORT || 'low' };
+    }
 
     try {
       res.writeHead(200, {
@@ -76,15 +145,10 @@ const server = http.createServer((req, res) => {
         'Content-Type': 'text/plain; charset=utf-8',
         'Cache-Control': 'no-cache',
       });
-      const stream = client.messages.stream({
-        model: MODEL,
-        max_tokens: 2048,
-        thinking: { type: 'adaptive' },
-        system,
-        messages,
-      });
+      const stream = client.messages.stream(params);
       stream.on('text', (t) => res.write(t));
-      await stream.finalMessage();
+      const finalMsg = await stream.finalMessage();
+      addUsage(finalMsg && finalMsg.usage); // 스트림 최종 메시지의 usage 로 월간 토큰 누적
       res.end();
     } catch (err) {
       if (!res.headersSent) {
@@ -98,5 +162,5 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   // eslint-disable-next-line no-console
-  console.log(`LuxeLoop AI proxy on http://localhost:${PORT}/api/ai (model: ${MODEL})`);
+  console.log(`LuxeLoop AI proxy on http://localhost:${PORT}/api/ai (model: ${MODEL}, rate ${RATE_LIMIT_PER_MIN}/min, cap ${MONTHLY_TOKEN_CAP} tok/mo)`);
 });

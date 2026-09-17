@@ -176,11 +176,50 @@ function viewHome() {
           el('span', { class: 'cat-emoji', html: itemSVG(cat.key, '#8a7f8f') }),
           el('span', {}, cat.ko)))),
     ),
+    weeklyDigest(),
     el('section', { class: 'wrap' },
       el('div', { class: 'section-head' }, el('h2', {}, '추천 아이템'), el('a', { href: '#/browse' }, '전체 보기 →')),
       el('div', { class: 'grid' }, ...featured.map(itemCard)))
   );
   return c;
+}
+
+// ---------- 무인(autonomous) 위클리 다이제스트 ----------
+// 홈 진입 시 자동으로 "이번 주 추천 대여 아이템 (상황/예산 기반)"을 생성합니다.
+// 카탈로그 + pricing 엔진 + askAI 를 재사용하므로, 오프라인 목업에서도 항상 동작합니다.
+function isoWeek(d) {
+  const t = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  const day = t.getUTCDay() || 7;
+  t.setUTCDate(t.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  return Math.ceil((((t - yearStart) / 86400000) + 1) / 7);
+}
+
+function weeklyPick() {
+  const opts = [
+    { key: 'wedding', ko: '결혼식/하객', budget: 120000, message: '이번 주 결혼식 하객룩에 어울리는 아이템을 예산 안에서 추천해줘' },
+    { key: 'party', ko: '파티/행사', budget: 150000, message: '이번 주 파티·연말 행사에 어울리는 아이템을 예산 안에서 추천해줘' },
+    { key: 'date', ko: '데이트/기념일', budget: 90000, message: '이번 주 데이트·기념일에 어울리는 아이템을 예산 안에서 추천해줘' },
+    { key: 'travel', ko: '여행/휴가', budget: 100000, message: '이번 주 여행·휴가에 어울리는 아이템을 예산 안에서 추천해줘' },
+    { key: 'business', ko: '비즈니스/면접', budget: 110000, message: '이번 주 비즈니스 미팅·면접에 어울리는 아이템을 예산 안에서 추천해줘' },
+  ];
+  return opts[isoWeek(new Date()) % opts.length];
+}
+
+function weeklyDigest() {
+  const pick = weeklyPick();
+  const out = el('div', { class: 'ai-out-holder', 'aria-live': 'polite', 'aria-label': '이번 주 추천 대여 아이템' });
+  const sec = el('section', { class: 'wrap' },
+    el('section', { class: 'panel ai-panel auto-digest' },
+      el('div', { class: 'section-head' },
+        el('h2', {}, '이번 주 추천 대여 아이템'),
+        el('span', { class: 'badge badge-verified' }, isMock() ? '자동 · 데모(목업)' : '자동 · Claude')),
+      el('p', { class: 'muted' }, `상황 “${pick.ko}” · 일일 예산 ${formatKRW(pick.budget)} 이하 기준으로 매주 자동 큐레이션됩니다.`),
+      out,
+      aiModeNote()));
+  // 무인 자동 생성 (목업이면 오프라인에서도 동작, 실 연동 실패 시 자동 폴백)
+  runAI('chat', { message: pick.message, budget: pick.budget, items: state.items, pricing: state.config.pricing }, out, null);
+  return sec;
 }
 
 function statTile(n, label) {

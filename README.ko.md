@@ -72,10 +72,34 @@ npm install && npm start            # http://localhost:8787/api/ai
 export const AI_ENDPOINT = "http://localhost:8787/api/ai";
 ```
 
-프록시는 `@anthropic-ai/sdk`로 Claude(모델 **`claude-opus-5`**)를 호출하고 응답을 브라우저로 스트리밍합니다.
+프록시는 `@anthropic-ai/sdk`로 Claude(기본 모델 **`claude-haiku-4-5`**, `AI_MODEL`로 변경 가능)를 호출하고 응답을 브라우저로 스트리밍합니다.
 
 > **🔒 API 키는 오직 서버(백엔드)에만 둡니다.** `ANTHROPIC_API_KEY`는 `server/.env`(git 제외)에만 존재합니다.
 > **브라우저·리포지토리에는 절대 키를 넣지 마세요** — 프론트엔드는 프록시 URL만 호출합니다.
+
+---
+
+## ⚙️ 고도화 — 무인·저비용 실 AI 연동
+
+**무인(autonomous) · 실제 Claude 연결 · 비용 합리적(cost-efficient).** AI 레이어는 비용 우선
+모델을 기본으로 하며, 오프라인에서도 앱이 절대 멈추지 않습니다.
+
+- **비용 모델** — 기본 **`claude-haiku-4-5`** (약 **입력 $1 / 출력 $5 per MTok**), `AI_MODEL`로
+  `claude-sonnet-5` / `claude-opus-5` 상향 가능. 안정적인 태스크별 시스템 프롬프트에 **프롬프트 캐싱**
+  (`cache_control:{type:'ephemeral'}`)을 적용해 반복 호출 시 캐시를 읽어 비용을 낮춥니다. 출력은
+  `max_tokens` ~700 으로 제한하고, **월간 토큰 예산**(`AI_MONTHLY_TOKEN_CAP`, 기본 2,000,000)과
+  IP별 **분당 호출 제한**(20/min)으로 지출을 보호합니다 — 초과 시 `429 {fallback:true}`.
+- **대략 비용** — 전형적 요청(카탈로그 포함 입력 ~1.5K + 출력 ~700)은 Haiku 4.5 기준 **$0.005 미만**,
+  즉 **1,000회당 약 $3–5** 수준이며 프롬프트 캐시가 데워지면 더 낮아집니다.
+- **☁️ 무료 Cloudflare Workers 원클릭 배포** — `server/worker.js` + `server/wrangler.toml`가 동일한
+  라우팅/캐싱 규칙으로 Anthropic REST API를 직접 호출합니다. `wrangler secret put ANTHROPIC_API_KEY`
+  후 `wrangler deploy` — 무료 티어라 관리할 서버가 없습니다(무인). [`server/README.md`](./server/README.md) 참고.
+- **무인 목업 폴백** — 엔드포인트 실패 / `429 {fallback:true}` / 네트워크 오류 시 프론트가
+  **결정론적 목업으로 자동 폴백**하여 앱이 멈추지 않습니다. 홈 진입 시에는 카탈로그 + `pricing.js`
+  엔진을 `askAI`로 재사용해 매주 **"이번 주 추천 대여 아이템 (상황/예산 기반)"** 다이제스트를 자동
+  생성하므로 완전 오프라인에서도 동작합니다.
+
+> **🔒 API 키는 오직 서버에만 — 브라우저·리포지토리에는 절대 두지 않습니다.**
 
 ---
 

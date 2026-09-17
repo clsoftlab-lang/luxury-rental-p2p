@@ -11,6 +11,8 @@
 //   • AI_ENDPOINT 가 설정되면  ⇒  { task, payload } 를 백엔드 프록시로 POST 하고
 //     응답 본문을 스트리밍으로 읽어 onToken 으로 흘려보냅니다.
 //     실제 Claude 호출과 API 키는 오직 백엔드(server/)에만 존재합니다.
+//   • 무인(autonomous) 안전장치: 엔드포인트 호출 실패 / 429 {fallback:true} / 네트워크 오류 시
+//     자동으로 목업(MockProvider)으로 폴백하여 앱이 절대 멈추지 않습니다.
 //
 // 지원 task: "chat"(대여 상담 챗봇), "styling"(코디/스타일링 추천), "authenticity"(정품 인증·안전 거래 안내)
 
@@ -28,28 +30,34 @@ export async function askAI(task, payload = {}, { onToken } = {}) {
     return mockProvider(task, payload, onToken);
   }
   // ---- 실 연동: 백엔드 프록시로 POST 후 스트리밍 ----
-  const res = await fetch(AI_ENDPOINT, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ task, payload }),
-  });
-  if (!res.ok || !res.body) {
-    let extra = '';
-    try { extra = await res.text(); } catch { /* ignore */ }
-    throw new Error(`AI 요청 실패 (HTTP ${res.status}) ${extra}`.trim());
-  }
-  const reader = res.body.getReader();
-  const decoder = new TextDecoder();
+  //   실패/429{fallback:true}/네트워크 오류 → 목업으로 자동 폴백(무인, 앱이 멈추지 않음).
   let full = '';
-  for (;;) {
-    const { value, done } = await reader.read();
-    if (done) break;
-    const chunk = decoder.decode(value, { stream: true });
-    if (chunk) { full += chunk; if (onToken) onToken(chunk); }
+  try {
+    const res = await fetch(AI_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ task, payload }),
+    });
+    // 429 {fallback:true}(비용 가드레일) 또는 기타 실패 응답 → 아직 출력 전이면 목업 폴백
+    if (!res.ok || !res.body) {
+      return mockProvider(task, payload, onToken);
+    }
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      const chunk = decoder.decode(value, { stream: true });
+      if (chunk) { full += chunk; if (onToken) onToken(chunk); }
+    }
+    const tail = decoder.decode();
+    if (tail) { full += tail; if (onToken) onToken(tail); }
+    return full;
+  } catch (err) {
+    // 네트워크 오류 등 — 아직 아무 것도 스트리밍하지 않았으면 목업으로 폴백(무인)
+    if (!full) return mockProvider(task, payload, onToken);
+    return full;
   }
-  const tail = decoder.decode();
-  if (tail) { full += tail; if (onToken) onToken(tail); }
-  return full;
 }
 
 export const AI_TASKS = Object.freeze(['chat', 'styling', 'authenticity']);

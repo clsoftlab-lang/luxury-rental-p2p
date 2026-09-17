@@ -125,6 +125,9 @@ for (const f of aiServerFiles) {
     fail++; fails.push(`node --check 실패: ${relative(root, f)} — ${(e.stderr || e.message || '').toString().trim()}`);
   }
 }
+// 무인·저비용 고도화 산출물 존재 확인 (Cloudflare Workers 변형 포함)
+ok(existsSync(join(root, 'server', 'worker.js')), 'server/worker.js (Cloudflare Workers 변형) 존재');
+ok(existsSync(join(root, 'server', 'wrangler.toml')), 'server/wrangler.toml 존재');
 
 // ---------- 5. AI_ENDPOINT 는 비어 있어야 함 (데모=목업, 키 없이 동작) ----------
 ok(AI_ENDPOINT === '', `ai/config.js 의 AI_ENDPOINT 는 빈 문자열 (실제 "${AI_ENDPOINT}")`);
@@ -133,7 +136,7 @@ ok(AI_ENDPOINT === '', `ai/config.js 의 AI_ENDPOINT 는 빈 문자열 (실제 "
 // 스캐너 자신이 매칭되지 않도록 접두어를 런타임에 조립합니다.
 const KEY_RE = new RegExp('sk-' + 'ant-[A-Za-z0-9_-]{20,}');
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.cache', '.tmp']);
-const SCAN_EXT = new Set(['.js', '.mjs', '.json', '.md', '.html', '.css', '.yml', '.yaml', '.txt', '.example', '.env', '']);
+const SCAN_EXT = new Set(['.js', '.mjs', '.json', '.md', '.html', '.css', '.yml', '.yaml', '.txt', '.toml', '.example', '.env', '']);
 const leaks = [];
 function scan(dir) {
   for (const name of readdirSync(dir)) {

@@ -74,10 +74,34 @@ Then set `ai/config.js`:
 export const AI_ENDPOINT = "http://localhost:8787/api/ai";
 ```
 
-The proxy calls Claude (model **`claude-opus-5`**) with `@anthropic-ai/sdk` and streams the response to the browser.
+The proxy calls Claude (default model **`claude-haiku-4-5`**, configurable via `AI_MODEL`) with `@anthropic-ai/sdk` and streams the response to the browser.
 
 > **🔒 API keys are SERVER-SIDE ONLY.** The `ANTHROPIC_API_KEY` lives exclusively in `server/.env` (git-ignored).
 > **Never put a key in the browser or the repository** — the frontend only ever calls the proxy URL.
+
+---
+
+## ⚙️ 고도화 — 무인·저비용 실 AI 연동
+
+**Autonomous · real Claude · cost-efficient.** The AI layer defaults to a cost-first model and never
+breaks the app — even offline.
+
+- **Cost model** — default **`claude-haiku-4-5`** (~**$1 / MTok input, $5 / MTok output**), configurable
+  to `claude-sonnet-5` / `claude-opus-5` via `AI_MODEL`. **Prompt caching** (`cache_control:{type:'ephemeral'}`)
+  on the stable per-task system prompt means repeated calls read cache and cost less. Output is capped
+  (`max_tokens` ~700), and a **monthly token budget** (`AI_MONTHLY_TOKEN_CAP`, default 2,000,000) plus a
+  per-IP **rate limit** (20/min) protect spend — over-budget calls return `429 {fallback:true}`.
+- **Rough cost estimate** — a typical request (~1.5K input incl. catalog + ~700 output) on Haiku 4.5 is
+  well under **$0.005**, i.e. roughly **$3–5 per 1,000 requests** — and lower once prompt caching warms up.
+- **☁️ Free Cloudflare Workers one-deploy** — `server/worker.js` + `server/wrangler.toml` call the
+  Anthropic REST API directly with the same routing/caching rules. `wrangler secret put ANTHROPIC_API_KEY`
+  then `wrangler deploy` — free tier = no server to babysit (무인). See [`server/README.md`](./server/README.md).
+- **Autonomous mock-fallback** — if the endpoint fails, returns `429 {fallback:true}`, or the network is
+  down, the frontend **auto-falls back to the deterministic mock** so the app keeps working unmanned. The
+  home page also auto-generates a weekly **"이번 주 추천 대여 아이템 (상황/예산 기반)"** digest on load,
+  built from the catalog + `pricing.js` engine via `askAI` — so it runs even fully offline.
+
+> **🔒 API keys are SERVER-SIDE ONLY — never in the browser or the repo.**
 
 ---
 
